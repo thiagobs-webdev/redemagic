@@ -33,6 +33,7 @@ Páginas *Views* foram criadas para acompanhar os resultados das *Resquisições
 
 > - 1: Clone este repositório em seu Servidor
 > - 2: Configure/Crie o arquivo `.env` com os dados de suas configurações: [env.exemple](https://github.com/laravel/laravel/blob/master/.env.example)
+
 >   APP_KEY -> Rode o comando: `php artisan key:generate`
 >   APP_URL
 >   Banco de Dados: DB*
