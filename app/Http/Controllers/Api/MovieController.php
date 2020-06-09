@@ -16,7 +16,12 @@ class MovieController extends Controller
     public function index()
     {
         $movies = Movie::all();
-        return response()->json($movies);
+        $movieData = [];
+        foreach ($movies as $movie) {
+            $movie->users = $movie->users;
+            $movieData[] = $movie;
+        }
+        return response()->json($movieData);
     }
 
     /**
@@ -57,8 +62,10 @@ class MovieController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        return Movie::find($id);
+    { 
+        $movie = Movie::find($id);
+        $movie->users = $movie->users;        
+        return response()->json($movie);
     }
 
     /**
@@ -114,6 +121,33 @@ class MovieController extends Controller
         $movieDelete->delete();
 
         $json['message'] = 'Filme Deletado com sucesso.';
+        return response()->json($json);
+    }
+
+
+    public function addUser(Request $request)
+    {
+        $movie = Movie::where('id', $request->movie_id)->first();
+        if (!$movie) {
+            $json['message'] = 'Filme não encontrado';
+            return response()->json($json);
+        }
+
+        $movie->users()->attach($request->user_id);
+        $json['message'] = 'Usuário Adicionado com Sucesso';
+        return response()->json($json);
+    }
+
+    public function removeUser(Request $request)
+    {
+        $movie = Movie::where('id', $request->movie_id)->first();
+        if (!$movie) {
+            $json['message'] = 'Filme não encontrado';
+            return response()->json($json);
+        }
+        
+        $movie->users()->detach($request->user_id);
+        $json['message'] = 'Usuário Removido com Sucesso';
         return response()->json($json);
     }
 }

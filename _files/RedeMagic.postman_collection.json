@@ -41,7 +41,7 @@
 								"movies"
 							]
 						},
-						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+						"description": "Liste todos os filmes do usuário conectado na API"
 					},
 					"response": []
 				},
@@ -79,7 +79,7 @@
 								"1"
 							]
 						},
-						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+						"description": "Liste o filme selecionado do usuário conectado na API"
 					},
 					"response": []
 				},
@@ -123,7 +123,7 @@
 								"movies"
 							]
 						},
-						"description": "A photo do usuário pode ser enviada e atualizada por este método!"
+						"description": "Cria um novo Filme com a API"
 					},
 					"response": []
 				},
@@ -177,7 +177,7 @@
 								"1"
 							]
 						},
-						"description": "Método para atualizar um lançamento (fatura) de forma controlada e segura acompanhando os campos da APP WEB"
+						"description": "Atualiza os dados do Filme selecionado do usuário na API"
 					},
 					"response": []
 				},
@@ -208,7 +208,7 @@
 								"1"
 							]
 						},
-						"description": "Método para deletar uma fatura do usuário conectado na API. Também deleta todas as relações feitas por chaves no banco."
+						"description": "Deleta o Filme na API"
 					},
 					"response": []
 				}
@@ -307,7 +307,7 @@
 								"categories"
 							]
 						},
-						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+						"description": "Liste todos as Categorias de Filme do usuário conectado na API"
 					},
 					"response": []
 				},
@@ -401,7 +401,7 @@
 								"2"
 							]
 						},
-						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+						"description": "Lista A Categoria selecionada na API"
 					},
 					"response": []
 				},
@@ -437,7 +437,7 @@
 								"categories"
 							]
 						},
-						"description": "A photo do usuário pode ser enviada e atualizada por este método!"
+						"description": "Cria uma nova Categoria na API"
 					},
 					"response": []
 				},
@@ -480,7 +480,7 @@
 								"1"
 							]
 						},
-						"description": "Método para atualizar um lançamento (fatura) de forma controlada e segura acompanhando os campos da APP WEB"
+						"description": "Atualiza a Categoria"
 					},
 					"response": []
 				},
@@ -512,7 +512,7 @@
 								"1"
 							]
 						},
-						"description": "Método para deletar uma fatura do usuário conectado na API. Também deleta todas as relações feitas por chaves no banco."
+						"description": "Deleta a CAtegoria"
 					},
 					"response": []
 				}
@@ -578,7 +578,7 @@
 								"types"
 							]
 						},
-						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+						"description": "Liste todos os Tipos de Usuários do usuário conectado na API"
 					},
 					"response": []
 				},
@@ -620,7 +620,7 @@
 								"1"
 							]
 						},
-						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+						"description": "Liste o Tipo de Usuário selecionado do usuário conectado na API"
 					},
 					"response": []
 				},
@@ -653,7 +653,7 @@
 								"types"
 							]
 						},
-						"description": "A photo do usuário pode ser enviada e atualizada por este método!"
+						"description": "Cria um novo Tipo de Usuário."
 					},
 					"response": []
 				},
@@ -696,7 +696,7 @@
 								"1"
 							]
 						},
-						"description": "Método para atualizar um lançamento (fatura) de forma controlada e segura acompanhando os campos da APP WEB"
+						"description": "Atualiza o Tipo de Usuário."
 					},
 					"response": []
 				},
@@ -728,7 +728,7 @@
 								"1"
 							]
 						},
-						"description": "Método para deletar uma fatura do usuário conectado na API. Também deleta todas as relações feitas por chaves no banco."
+						"description": "Deleta o Tipo de Usuário"
 					},
 					"response": []
 				}
@@ -771,7 +771,7 @@
 								"users"
 							]
 						},
-						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+						"description": "Liste todos os usuários do usuário conectado na API"
 					},
 					"response": []
 				},
@@ -797,7 +797,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/movies/1",
+							"raw": "http://localhost:8000/api/users/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -805,11 +805,11 @@
 							"port": "8000",
 							"path": [
 								"api",
-								"movies",
+								"users",
 								"1"
 							]
 						},
-						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+						"description": "Liste os dados do usuário na API"
 					},
 					"response": []
 				},
@@ -823,26 +823,26 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Comédia",
-									"description": "Nome do Filme",
+									"value": "Arilene Bomfim",
+									"description": "Nome da Pessoa",
 									"type": "text"
 								},
 								{
-									"key": "description",
-									"value": "Comédia Comédia",
-									"description": "Descrição",
+									"key": "email",
+									"value": "lene@thiagobs.me",
+									"description": "Email da Pessoa",
 									"type": "text"
 								},
 								{
-									"key": "movie_type_id",
-									"value": "1",
-									"description": "Categoria Relacionamento",
+									"key": "user_type_id",
+									"value": "3",
+									"description": "Seu Papel",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/movies",
+							"raw": "http://localhost:8000/api/users",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -850,10 +850,10 @@
 							"port": "8000",
 							"path": [
 								"api",
-								"movies"
+								"users"
 							]
 						},
-						"description": "A photo do usuário pode ser enviada e atualizada por este método!"
+						"description": "Cria um novo Usuário"
 					},
 					"response": []
 				},
@@ -876,26 +876,29 @@
 							"urlencoded": [
 								{
 									"key": "name",
-									"value": "Update",
+									"value": "Thiago Bomfim",
 									"description": "Nome",
 									"type": "text"
 								},
 								{
-									"key": "description",
-									"value": "Update Update",
+									"key": "email",
+									"value": "vail@thiagobs.me",
 									"description": "Descrição",
 									"type": "text"
 								},
 								{
-									"key": "movie_type_id",
-									"value": "1",
+									"key": "user_type_id",
+									"value": "3",
 									"description": "Categoria Relacionamento",
 									"type": "text"
 								}
-							]
+							],
+							"options": {
+								"urlencoded": {}
+							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/movies/1",
+							"raw": "http://localhost:8000/api/users/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -903,11 +906,11 @@
 							"port": "8000",
 							"path": [
 								"api",
-								"movies",
+								"users",
 								"1"
 							]
 						},
-						"description": "Método para atualizar um lançamento (fatura) de forma controlada e segura acompanhando os campos da APP WEB"
+						"description": "Edita o Usuário"
 					},
 					"response": []
 				},
@@ -926,7 +929,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8000/api/movies/1",
+							"raw": "http://localhost:8000/api/users/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -934,11 +937,95 @@
 							"port": "8000",
 							"path": [
 								"api",
-								"movies",
-								"1"
+								"users",
+								"2"
 							]
 						},
-						"description": "Método para deletar uma fatura do usuário conectado na API. Também deleta todas as relações feitas por chaves no banco."
+						"description": "Deleta o Usuário"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Movie Has Users",
+			"item": [
+				{
+					"name": "Movie ADD User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "movie_id",
+									"value": "1",
+									"description": "Filme que Usuário será Adicionado",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"description": "Usuário que será Adicionado",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movie/add-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"add-user"
+							]
+						},
+						"description": "Adiciona um Usário ao Elenco do Filme"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie REMOVE User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "movie_id",
+									"value": "1",
+									"description": "Filme que Usuário será Adicionado",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"description": "Usuário que será Adicionado",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movie/remove-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"remove-user"
+							]
+						},
+						"description": "Remove um Usuário do Elenco do Filme"
 					},
 					"response": []
 				}

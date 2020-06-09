@@ -30,6 +30,8 @@ Route::group(['namespace' => 'Api', 'as' => 'api.'], function(){
         Route::apiResource('/movie/categories', 'MovieTypeController');
         Route::apiResource('/users', 'UserController');
         Route::apiResource('/user/types', 'UserTypeController');
+        Route::post('/movie/add-user', 'MovieController@addUser')->name('movie_add_user');
+        Route::post('/movie/remove-user', 'MovieController@removeUser')->name('movie_remove_user');
     // });
 
 });
