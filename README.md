@@ -71,6 +71,3 @@ Obrigado.
 
 :P
 
-
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
