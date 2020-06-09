@@ -1,0 +1,1059 @@
+{
+	"info": {
+		"_postman_id": "d7d2369f-066f-47d0-ae91-e40ba35cf45b",
+		"name": "RedeMagic Online",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Movie Data All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/movies",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"movies"
+							]
+						},
+						"description": "Liste todos os filmes do usuário conectado na API"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/movies/1",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Liste o filme selecionado do usuário conectado na API"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Comédia",
+									"description": "Nome do Filme",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Comédia Comédia",
+									"description": "Descrição",
+									"type": "text"
+								},
+								{
+									"key": "movie_type_id",
+									"value": "1",
+									"description": "Categoria Relacionamento",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/movies",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"movies"
+							]
+						},
+						"description": "Cria um novo Filme com a API"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Update",
+									"description": "Nome",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Update Update",
+									"description": "Descrição",
+									"type": "text"
+								},
+								{
+									"key": "movie_type_id",
+									"value": "1",
+									"description": "Categoria Relacionamento",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/movies/1",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Atualiza os dados do Filme selecionado do usuário na API"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/movies/1",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Deleta o Filme na API"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Movie Category",
+			"item": [
+				{
+					"name": "Category Data All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "wallet_id",
+									"value": "23",
+									"description": "O ID da carteira do usuário",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "3",
+									"description": "O ID da categoria deste lançamento",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Api created invoice",
+									"description": "Descrição dolanámento",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "income",
+									"description": "Tipo, pode ser income ou expense",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "25000.25",
+									"description": "Valor decimal do lançamento (R$ 250 = 250.00)",
+									"type": "text"
+								},
+								{
+									"key": "due_at",
+									"value": "2019-02-15",
+									"description": "Data de vencimento no formado YYYY-MM-DD",
+									"type": "text"
+								},
+								{
+									"key": "repeat_when",
+									"value": "single",
+									"description": "Repetição do lançamento, pode ser single, enrollment ou fixed",
+									"type": "text"
+								},
+								{
+									"key": "period",
+									"value": "month",
+									"description": "Período, pode ser month ou year",
+									"type": "text"
+								},
+								{
+									"key": "enrollments",
+									"value": "1",
+									"description": "Número de parcelas entre 1 e 420",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/movie/categories",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"movie",
+								"categories"
+							]
+						},
+						"description": "Liste todos as Categorias de Filme do usuário conectado na API"
+					},
+					"response": []
+				},
+				{
+					"name": "Category Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "wallet_id",
+									"value": "23",
+									"description": "O ID da carteira do usuário",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "3",
+									"description": "O ID da categoria deste lançamento",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Api created invoice",
+									"description": "Descrição dolanámento",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "income",
+									"description": "Tipo, pode ser income ou expense",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "25000.25",
+									"description": "Valor decimal do lançamento (R$ 250 = 250.00)",
+									"type": "text"
+								},
+								{
+									"key": "due_at",
+									"value": "2019-02-15",
+									"description": "Data de vencimento no formado YYYY-MM-DD",
+									"type": "text"
+								},
+								{
+									"key": "repeat_when",
+									"value": "single",
+									"description": "Repetição do lançamento, pode ser single, enrollment ou fixed",
+									"type": "text"
+								},
+								{
+									"key": "period",
+									"value": "month",
+									"description": "Período, pode ser month ou year",
+									"type": "text"
+								},
+								{
+									"key": "enrollments",
+									"value": "1",
+									"description": "Número de parcelas entre 1 e 420",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/movie/categories/2",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"movie",
+								"categories",
+								"2"
+							]
+						},
+						"description": "Lista A Categoria selecionada na API"
+					},
+					"response": []
+				},
+				{
+					"name": "Category New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Animação",
+									"description": "Nome da Categoria",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/movie/categories",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"movie",
+								"categories"
+							]
+						},
+						"description": "Cria uma nova Categoria na API"
+					},
+					"response": []
+				},
+				{
+					"name": "Category Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Animação 2",
+									"description": "Nome",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/movie/categories/1",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"movie",
+								"categories",
+								"1"
+							]
+						},
+						"description": "Atualiza a Categoria"
+					},
+					"response": []
+				},
+				{
+					"name": "Category Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/movie/categories/1",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"movie",
+								"categories",
+								"1"
+							]
+						},
+						"description": "Deleta a CAtegoria"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "210cac93-b649-4b98-95fd-1c3438415049",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "58ab2562-413f-40cc-b68c-910207e15934",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User Types",
+			"item": [
+				{
+					"name": "Types Data All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/user/types",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"user",
+								"types"
+							]
+						},
+						"description": "Liste todos os Tipos de Usuários do usuário conectado na API"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/user/types/1",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"user",
+								"types",
+								"1"
+							]
+						},
+						"description": "Liste o Tipo de Usuário selecionado do usuário conectado na API"
+					},
+					"response": []
+				},
+				{
+					"name": "Type New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Diretor",
+									"description": "Nome do Tipo de Usuário",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/user/types",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"user",
+								"types"
+							]
+						},
+						"description": "Cria um novo Tipo de Usuário."
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ator",
+									"description": "Nome",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/user/types/1",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"user",
+								"types",
+								"1"
+							]
+						},
+						"description": "Atualiza o Tipo de Usuário."
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/user/types/1",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"user",
+								"types",
+								"1"
+							]
+						},
+						"description": "Deleta o Tipo de Usuário"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User Data All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/users",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Liste todos os usuários do usuário conectado na API"
+					},
+					"response": []
+				},
+				{
+					"name": "User Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/users/1",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						},
+						"description": "Liste os dados do usuário na API"
+					},
+					"response": []
+				},
+				{
+					"name": "User New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Arilene Bomfim",
+									"description": "Nome da Pessoa",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "lene@thiagobs.me",
+									"description": "Email da Pessoa",
+									"type": "text"
+								},
+								{
+									"key": "user_type_id",
+									"value": "3",
+									"description": "Seu Papel",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/users",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Cria um novo Usuário"
+					},
+					"response": []
+				},
+				{
+					"name": "User Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Thiago Bomfim",
+									"description": "Nome",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "vail@thiagobs.me",
+									"description": "Descrição",
+									"type": "text"
+								},
+								{
+									"key": "user_type_id",
+									"value": "3",
+									"description": "Categoria Relacionamento",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/users/1",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						},
+						"description": "Edita o Usuário"
+					},
+					"response": []
+				},
+				{
+					"name": "User Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/users/2",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						},
+						"description": "Deleta o Usuário"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Movie Has Users",
+			"item": [
+				{
+					"name": "Movie ADD User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "movie_id",
+									"value": "1",
+									"description": "Filme que Usuário será Adicionado",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"description": "Usuário que será Adicionado",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/movie/add-user",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"movie",
+								"add-user"
+							]
+						},
+						"description": "Adiciona um Usário ao Elenco do Filme"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie REMOVE User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "movie_id",
+									"value": "1",
+									"description": "Filme que Usuário será Adicionado",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"description": "Usuário que será Adicionado",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://redemagic.thiagobs.me/api/movie/remove-user",
+							"protocol": "https",
+							"host": [
+								"redemagic",
+								"thiagobs",
+								"me"
+							],
+							"path": [
+								"api",
+								"movie",
+								"remove-user"
+							]
+						},
+						"description": "Remove um Usuário do Elenco do Filme"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
