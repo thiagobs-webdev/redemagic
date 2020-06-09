@@ -25,7 +25,7 @@ Data de entrega do teste: 09/06/2020
 
 Por meio da documentação do [Laravel](https://laravel.com/docs/7.x) foi realizado a instalação. As Rotas API foram criadas para tal finalidade e consumidas através do [Postman](https://www.postman.com/). Um Modelo Entidade Relacionamento (MER) foi construído para mapear o problema e, por meio dele, criado as Classes necessárias.
 
-<p align="center"><img src="https://www.magicwebdesign.com.br/assets/images/magic_logo.png" width="400"></p>
+<p align="center"><img src="https://github.com/thiagobs-webdev/redemagic/blob/master/_db/mer.png" width="400"></p>
 
 Por meio do [Postman](https://www.postman.com/) foi-se criando o **collection** necessário para consumir e testar as **rotas** desenvolvidas. Criou-se também dados através do [Seeder](https://laravel.com/docs/7.x/seeding
 ) para usar na API de início.
@@ -47,7 +47,7 @@ Páginas *Views* foram criadas para acompanhar os resultados das *Resquisições
 
 5: Rode os **seeders**: `php artisan db:seed`
 
-6: Salve o **Postman Collection**: [Aquivo no Repositŕio](https://github.com/thiagobs-webdev/redemagic/tree/master/_files)
+6: Salve o **Postman Collection**: [Aquivo no Repositŕio](https://github.com/thiagobs-webdev/redemagic/blob/master/_files/RedeMagic.postman_collection.json)
 
 7: Abra/Importe  o arquivo **Postman Collection** em seu programa *Postman*
 
@@ -63,7 +63,7 @@ Boa Sorte \o/
 ## Considerações Finais
 
 A execução deste projeto pode ser obtido online em [https://redemagic.thiagobs.me/](https://redemagic.thiagobs.me/).
-Para consumir a API deste link online, basta apenas Salvar o **Postman Collection**: [Postman Colletion Online](https://github.com/thiagobs-webdev/redemagic/tree/master/_files). Não há necessidade de alterar este arquivo, basta apenas importar no *Postman*.
+Para consumir a API deste link online, basta apenas Salvar o **Postman Collection**: [Postman Colletion Online](https://github.com/thiagobs-webdev/redemagic/blob/master/_files/RedeMagic%20Online.postman_collection.json). Não há necessidade de alterar este arquivo, basta apenas importar no *Postman*.
 
 
 
