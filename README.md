@@ -63,7 +63,13 @@ Boa Sorte \o/
 ## Considerações Finais
 
 A execução deste projeto pode ser obtido online em [https://redemagic.thiagobs.me/](https://redemagic.thiagobs.me/).
-Para consumir a API deste link online, basta apenas Salvar o **Postman Collection**: [Postman Colletion Online](https://github.com/thiagobs-webdev/redemagic/blob/master/_files/RedeMagic%20Online.postman_collection.json). Não há necessidade de alterar este arquivo, basta apenas importar no *Postman*.
+Para consumir a API deste link online, basta apenas Salvar o **Postman Collection**: [Postman Colletion Online](https://github.com/thiagobs-webdev/redemagic/blob/master/_files/RedeMagic%20Online.postman_collection.json). Não há necessidade de alterar este arquivo, basta apenas importar no *Postman* e consumir a API.
+
+Obrigado.
+
+\o/
+
+:P
 
 
 
