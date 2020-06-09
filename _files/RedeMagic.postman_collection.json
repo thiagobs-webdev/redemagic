@@ -1,0 +1,950 @@
+{
+	"info": {
+		"_postman_id": "5de5800f-9022-4cf0-ad45-3769a58695e7",
+		"name": "RedeMagic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Movie Data All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies"
+							]
+						},
+						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+					},
+					"response": []
+				},
+				{
+					"name": "Movie New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Comédia",
+									"description": "Nome do Filme",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Comédia Comédia",
+									"description": "Descrição",
+									"type": "text"
+								},
+								{
+									"key": "movie_type_id",
+									"value": "1",
+									"description": "Categoria Relacionamento",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies"
+							]
+						},
+						"description": "A photo do usuário pode ser enviada e atualizada por este método!"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Update",
+									"description": "Nome",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Update Update",
+									"description": "Descrição",
+									"type": "text"
+								},
+								{
+									"key": "movie_type_id",
+									"value": "1",
+									"description": "Categoria Relacionamento",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Método para atualizar um lançamento (fatura) de forma controlada e segura acompanhando os campos da APP WEB"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Método para deletar uma fatura do usuário conectado na API. Também deleta todas as relações feitas por chaves no banco."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Movie Category",
+			"item": [
+				{
+					"name": "Category Data All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "wallet_id",
+									"value": "23",
+									"description": "O ID da carteira do usuário",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "3",
+									"description": "O ID da categoria deste lançamento",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Api created invoice",
+									"description": "Descrição dolanámento",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "income",
+									"description": "Tipo, pode ser income ou expense",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "25000.25",
+									"description": "Valor decimal do lançamento (R$ 250 = 250.00)",
+									"type": "text"
+								},
+								{
+									"key": "due_at",
+									"value": "2019-02-15",
+									"description": "Data de vencimento no formado YYYY-MM-DD",
+									"type": "text"
+								},
+								{
+									"key": "repeat_when",
+									"value": "single",
+									"description": "Repetição do lançamento, pode ser single, enrollment ou fixed",
+									"type": "text"
+								},
+								{
+									"key": "period",
+									"value": "month",
+									"description": "Período, pode ser month ou year",
+									"type": "text"
+								},
+								{
+									"key": "enrollments",
+									"value": "1",
+									"description": "Número de parcelas entre 1 e 420",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movie/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"categories"
+							]
+						},
+						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+					},
+					"response": []
+				},
+				{
+					"name": "Category Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "wallet_id",
+									"value": "23",
+									"description": "O ID da carteira do usuário",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "3",
+									"description": "O ID da categoria deste lançamento",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Api created invoice",
+									"description": "Descrição dolanámento",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "income",
+									"description": "Tipo, pode ser income ou expense",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "25000.25",
+									"description": "Valor decimal do lançamento (R$ 250 = 250.00)",
+									"type": "text"
+								},
+								{
+									"key": "due_at",
+									"value": "2019-02-15",
+									"description": "Data de vencimento no formado YYYY-MM-DD",
+									"type": "text"
+								},
+								{
+									"key": "repeat_when",
+									"value": "single",
+									"description": "Repetição do lançamento, pode ser single, enrollment ou fixed",
+									"type": "text"
+								},
+								{
+									"key": "period",
+									"value": "month",
+									"description": "Período, pode ser month ou year",
+									"type": "text"
+								},
+								{
+									"key": "enrollments",
+									"value": "1",
+									"description": "Número de parcelas entre 1 e 420",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movie/categories/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"categories",
+								"2"
+							]
+						},
+						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+					},
+					"response": []
+				},
+				{
+					"name": "Category New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Animação",
+									"description": "Nome da Categoria",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movie/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"categories"
+							]
+						},
+						"description": "A photo do usuário pode ser enviada e atualizada por este método!"
+					},
+					"response": []
+				},
+				{
+					"name": "Category Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Animação 2",
+									"description": "Nome",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movie/categories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"categories",
+								"1"
+							]
+						},
+						"description": "Método para atualizar um lançamento (fatura) de forma controlada e segura acompanhando os campos da APP WEB"
+					},
+					"response": []
+				},
+				{
+					"name": "Category Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/movie/categories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"categories",
+								"1"
+							]
+						},
+						"description": "Método para deletar uma fatura do usuário conectado na API. Também deleta todas as relações feitas por chaves no banco."
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1958758e-99f4-41d6-ab3f-04037ac1e901",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "cd9b09ed-c454-4dd9-a529-9f4058409415",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User Types",
+			"item": [
+				{
+					"name": "Types Data All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"types"
+							]
+						},
+						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/types/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"types",
+								"1"
+							]
+						},
+						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+					},
+					"response": []
+				},
+				{
+					"name": "Type New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Diretor",
+									"description": "Nome do Tipo de Usuário",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"types"
+							]
+						},
+						"description": "A photo do usuário pode ser enviada e atualizada por este método!"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ator",
+									"description": "Nome",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user/types/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"types",
+								"1"
+							]
+						},
+						"description": "Método para atualizar um lançamento (fatura) de forma controlada e segura acompanhando os campos da APP WEB"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/user/types/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"types",
+								"1"
+							]
+						},
+						"description": "Método para deletar uma fatura do usuário conectado na API. Também deleta todas as relações feitas por chaves no banco."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User Data All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+					},
+					"response": []
+				},
+				{
+					"name": "User Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Liste todos os lançamentos (faturas) do usuário conectado na API e aplique filtros e paginação."
+					},
+					"response": []
+				},
+				{
+					"name": "User New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Comédia",
+									"description": "Nome do Filme",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Comédia Comédia",
+									"description": "Descrição",
+									"type": "text"
+								},
+								{
+									"key": "movie_type_id",
+									"value": "1",
+									"description": "Categoria Relacionamento",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies"
+							]
+						},
+						"description": "A photo do usuário pode ser enviada e atualizada por este método!"
+					},
+					"response": []
+				},
+				{
+					"name": "User Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Update",
+									"description": "Nome",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Update Update",
+									"description": "Descrição",
+									"type": "text"
+								},
+								{
+									"key": "movie_type_id",
+									"value": "1",
+									"description": "Categoria Relacionamento",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Método para atualizar um lançamento (fatura) de forma controlada e segura acompanhando os campos da APP WEB"
+					},
+					"response": []
+				},
+				{
+					"name": "User Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "email",
+								"value": "{{email}}"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						},
+						"description": "Método para deletar uma fatura do usuário conectado na API. Também deleta todas as relações feitas por chaves no banco."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
