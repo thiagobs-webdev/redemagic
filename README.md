@@ -23,5 +23,12 @@ Data de entrega do teste: 09/06/2020
 
 ## Descrição do Desenvolvimento
 
+Por meio da documentação do [Laravel](https://laravel.com/docs/7.x) foi realizado a instalação. As Rotas API foram criadas para tal finalidade e consumidas através do [Postman](https://www.postman.com/). Um Modelo Entidade Relacionamento (MER) foi construído para mapear o problema e, por meio dele, criado as Classes necessárias.
+
+Por meio do [Postman](https://www.postman.com/) foi-se criando o **collection** necessário para consumir e testar as **rotas** desenvolvidas.
+
+## Instalação
+
+
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
