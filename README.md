@@ -25,21 +25,39 @@ Data de entrega do teste: 09/06/2020
 
 Por meio da documentação do [Laravel](https://laravel.com/docs/7.x) foi realizado a instalação. As Rotas API foram criadas para tal finalidade e consumidas através do [Postman](https://www.postman.com/). Um Modelo Entidade Relacionamento (MER) foi construído para mapear o problema e, por meio dele, criado as Classes necessárias.
 
-Por meio do [Postman](https://www.postman.com/) foi-se criando o **collection** necessário para consumir e testar as **rotas** desenvolvidas.
+Por meio do [Postman](https://www.postman.com/) foi-se criando o **collection** necessário para consumir e testar as **rotas** desenvolvidas. Criou-se também dados através do [Seeder](https://laravel.com/docs/7.x/seeding
+) para usar na API de início.
 
 Páginas *Views* foram criadas para acompanhar os resultados das *Resquisições* da *API*. O Acesso às essas páginas se dá por meio da URL basse do instalção (**url/**).
 
 ## Instalação
 
-> - 1: Clone este repositório em seu Servidor
-> - 2: Configure/Crie o arquivo `.env` com os dados de suas configurações: [env.exemple](https://github.com/laravel/laravel/blob/master/.env.example)
+1: Clone este repositório em seu Servidor
+2: Configure/Crie o arquivo `.env` com os dados de suas configurações: [env.exemple](https://github.com/laravel/laravel/blob/master/.env.example)
 
 >   APP_KEY -> Rode o comando: `php artisan key:generate`
->   APP_URL
->   Banco de Dados: DB*
+>   APP_URL -> Sua_URL
+>   Banco de Dados: DB* -> Seu Banco de Dados
+
+3: Instale as depedências: `composer install`
+
+4: Rode as **migrations**: `php artisan migrate`
+
+5: Rode os **seeders**: `php artisan db:seed`
+
+6: Salve o **Postman Collection**: [Aquivo no Repositŕio](https://github.com/thiagobs-webdev/redemagic/tree/master/_files)
+
+7: Abra o arquivo **Postman Collection** em seu programa *Postman*
+
+8: Substitua a URL *Base do arquivo* (que é: *http://localhost:8000*) pela sua URL caso seja diferente.
+
+9: Com a URL configurada, basta apenas consumir a API
+
+10: Acompanhe o Resultado na página principal do Projeto.
+
+Boa Sorte \o/
 
 
-https://github.com/thiagobs-webdev/redemagic/tree/master/_files
 
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
